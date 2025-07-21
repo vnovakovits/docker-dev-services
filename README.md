@@ -8,12 +8,13 @@ Docker Compose. Makes it easier to start / stop set of services on demand.
 Supported services:
 
 - ELK stack (Elasticsearch + Logstash + Kibana)
+- EventStore
 - MongoDB
+- PostgreSQL
 - RabbitMQ
 - Redis
-- EventStore
 - SQL Server
-- PostgreSQL
+- Unleash
 - Vault
 
 ## Prerequisites
@@ -24,6 +25,8 @@ Supported services:
 
 Review `<service>.yaml` files, you may want to make some adjustments e.g.
 mounted data volume path etc.
+
+**Note**: Unleash uses the existing PostGIS instance (which includes PostgreSQL) for its database. No additional PostgreSQL service is required.
 
 You will also find `compose-<service>.env` files for some of the services. This
 is where devault environment variables are defined. If you need to change

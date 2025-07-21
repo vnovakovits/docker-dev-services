@@ -5,6 +5,7 @@ DOCKER_DEVSVC_COMPOSE_FILES="\
  -f compose-kibana.yml\
  -f compose-mongo.yml\
  -f compose-rabbitmq.yml\
+ -f compose-unleash.yml\
  -f network.yml\
  "
 

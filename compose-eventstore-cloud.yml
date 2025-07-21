@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  eventstore-cloud:
+    image: eventstore/eventstore:$EVENTSTORE_CLOUD_VERSION
+    volumes:
+      - eventstore-data-cloud:/var/lib/eventstore
+    env_file:
+      - compose-eventstore-cloud.env
+      - compose-eventstore-cloud.env.local
+    ports:
+      - 1114:1113
+      - 2114:2113
+    networks:
+      - svcnet
+
+volumes:
+
+  eventstore-data-cloud:
+    driver: local

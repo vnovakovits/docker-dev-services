@@ -1,0 +1,27 @@
+# Unleash Configuration for Development
+# This file contains basic configuration for Unleash server
+
+# Database configuration
+database:
+  host: postgis
+  name: postgres
+  username: postgres
+  password: changeit
+  ssl: false
+
+# API configuration
+api:
+  port: 4242
+  host: 0.0.0.0
+
+# Authentication
+auth:
+  enable: false  # Disable authentication for development
+
+# Logging
+logging:
+  level: info
+
+# Feature flags
+features:
+  enableLegacyRoutes: true 

@@ -1,9 +1,3 @@
-version: "3"
-
-networks:
-  svcnet:
-    external: true
-
 services:
   unleash:
     image: unleashorg/unleash-server:6.5.3
